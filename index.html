@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du Yuhan - 个人作品集</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0a0a0c',
+                        secondary: '#121216',
+                        accent: '#4f6fff',
+                        'accent-hover': '#6c84ff',
+                    },
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <!-- 顶部导航栏 -->
+    <header class="topbar">
+        <div class="topbar-container">
+            <div class="topbar-left">
+                <div class="topbar-avatar">
+                    <img src="images/avatar.jpg" alt="头像">
+                </div>
+                <div class="topbar-info">
+                    <h1 class="text-white">Du Yuhan</h1>
+                    <p data-i18n="role">Software Engineer</p>
+                </div>
+            </div>
+            
+            <nav class="topbar-nav">
+                <a href="index.html" id="nav-home" class="active">
+                    <i class="fas fa-home"></i>
+                    <span data-i18n="nav_home">首页</span>
+                </a>
+                <a href="resume.html" id="nav-resume">
+                    <i class="fas fa-user"></i>
+                    <span data-i18n="nav_resume">关于我</span>
+                </a>
+                <a href="projects.html" id="nav-projects">
+                    <i class="fas fa-code"></i>
+                    <span data-i18n="nav_projects">项目</span>
+                </a>
+            </nav>
+            
+            <div class="contact-links">
+                <a href="mailto:your.email@example.com" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://github.com/Duyuhan" title="GitHub" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" title="LinkedIn" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="main-content-wrapper">
+            <div class="main-content-inner">
+                <div class="quick-stats grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="stat-card transform hover:scale-105 transition-all">
+                        <i class="fas fa-code text-accent"></i>
+                        <h3 class="font-semibold" data-i18n="project_experience">项目经验</h3>
+                        <p data-i18n="project_years">5+ 年</p>
+                    </div>
+                    <div class="stat-card transform hover:scale-105 transition-all">
+                        <i class="fas fa-layer-group text-accent"></i>
+                        <h3 class="font-semibold" data-i18n="tech_stack">技术栈</h3>
+                        <p data-i18n="tech_stack_desc">全栈开发</p>
+                    </div>
+                    <div class="stat-card transform hover:scale-105 transition-all">
+                        <i class="fas fa-project-diagram text-accent"></i>
+                        <h3 class="font-semibold" data-i18n="project_count">项目数量</h3>
+                        <p data-i18n="project_count_desc">20+</p>
+                    </div>
+                </div>
+
+                <div class="featured-section mt-16">
+                    <h2 class="text-2xl font-bold mb-8 text-white relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent pb-2" data-i18n="core_skills">核心技能</h2>
+                    <div class="skills-grid grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="skill-card backdrop-blur-sm bg-opacity-20 transform hover:scale-105 transition-all">
+                            <div class="skill-icon bg-gradient-to-br from-accent to-accent-hover">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <h3 class="font-semibold" data-i18n="frontend_dev">前端开发</h3>
+                            <p class="text-gray-300" data-i18n="frontend_desc">JavaScript / React / Vue</p>
+                        </div>
+                        <div class="skill-card backdrop-blur-sm bg-opacity-20 transform hover:scale-105 transition-all">
+                            <div class="skill-icon bg-gradient-to-br from-accent to-accent-hover">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h3 class="font-semibold" data-i18n="backend_dev">后端开发</h3>
+                            <p class="text-gray-300" data-i18n="backend_desc">Node.js / Python / Java</p>
+                        </div>
+                        <div class="skill-card backdrop-blur-sm bg-opacity-20 transform hover:scale-105 transition-all">
+                            <div class="skill-icon bg-gradient-to-br from-accent to-accent-hover">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3 class="font-semibold" data-i18n="database">数据库</h3>
+                            <p class="text-gray-300" data-i18n="database_desc">MySQL / MongoDB / Redis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-wave"></div>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2 class="text-xl font-bold text-white">Du Yuhan</h2>
+            </div>
+            <div class="footer-links">
+                <a href="index.html" data-i18n="nav_home">首页</a>
+                <a href="resume.html" data-i18n="nav_resume">关于我</a>
+                <a href="projects.html" data-i18n="nav_projects">项目</a>
+            </div>
+            <div class="footer-social">
+                <a href="mailto:your.email@example.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://github.com/Duyuhan" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <p class="footer-text">© 2023 Du Yuhan. All rights reserved.</p>
+        </div>
+        <div class="footer-dots">
+            <div class="footer-dot" style="top: 20%; left: 10%"></div>
+            <div class="footer-dot" style="top: 30%; left: 25%"></div>
+            <div class="footer-dot" style="top: 50%; left: 50%"></div>
+            <div class="footer-dot" style="top: 70%; left: 70%"></div>
+            <div class="footer-dot" style="top: 40%; left: 80%"></div>
+            <div class="footer-dot" style="top: 60%; left: 30%"></div>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
