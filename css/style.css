@@ -4,7 +4,7 @@
     --bg-primary: #ffffff;  /* 主内容区背景 - 白色 */
     --bg-secondary: #121212;  /* 导航栏和页脚背景 - 深黑色 */
     --text-primary: #212121;  /* 主内容区文字 - 几乎黑色 */
-    --text-secondary: #757575;  /* 次要文字 - 灰色 */
+    --text-secondary: #444444;  /* 次要文字 - 更深的灰色，提高可读性 */
     --text-on-dark: #f8f9fa;  /* 深色背景上的文字 - 白色 */
     --accent-color: #333333;  /* 强调色 - 深灰色 */
     --accent-hover: #000000;  /* 强调色悬停 - 纯黑 */
@@ -473,14 +473,51 @@ body.dark-theme {
 .timeline-content {
     background-color: var(--card-bg);
     padding: 1.5rem;
-    border-radius: 12px;
+    border-radius: 0.75rem;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
+    position: relative;
 }
 
 .timeline-content:hover {
-    transform: translateY(-3px);
     box-shadow: var(--shadow-md);
+}
+
+.timeline-content h3 {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.timeline-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.timeline-info span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.timeline-info i {
+    color: var(--accent-color);
+}
+
+.timeline-details {
+    color: var(--text-primary);
+}
+
+.timeline-details li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .timeline-dot {
@@ -593,6 +630,26 @@ body.dark-theme {
     margin: 3rem 0;
 }
 
+.stat-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.stat-card h3 {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
 .stat-card i {
     font-size: 2rem;
     color: var(--accent-color);
@@ -612,6 +669,17 @@ body.dark-theme {
     padding: 1.5rem;
     border-radius: 12px;
     transition: var(--transition);
+}
+
+.skill-card h3 {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.skill-card p {
+    color: var(--text-primary);
+    font-weight: 500;
 }
 
 .skill-card:hover {
@@ -680,22 +748,6 @@ body.dark-theme {
     background-color: var(--border-color);
 }
 
-.timeline-info {
-    display: flex;
-    gap: 1.5rem;
-    color: var(--text-secondary);
-    margin: 0.5rem 0 1rem;
-}
-
-.timeline-info span {
-    display: flex;
-    align-items: center;
-}
-
-.timeline-info i {
-    margin-right: 0.5rem;
-}
-
 .timeline-details {
     list-style-type: none;
 }
@@ -718,12 +770,34 @@ body.dark-theme {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
+    margin-top: 2rem;
 }
 
-.certificate-card i {
-    font-size: 2.5rem;
-    color: var(--accent-color);
-    margin-bottom: 1rem;
+.certificate-card {
+    background-color: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.certificate-card h3 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.certificate-card p {
+    color: var(--text-secondary);
+    text-align: center;
 }
 
 /* 项目筛选按钮 */
@@ -799,9 +873,9 @@ body.dark-theme {
 }
 
 .project-content p {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
+    color: var(--text-primary);
     margin-bottom: 1rem;
+    font-size: 0.95rem;
 }
 
 .project-tech {
@@ -812,10 +886,18 @@ body.dark-theme {
 
 .project-tech span {
     padding: 0.25rem 0.75rem;
-    background-color: var(--bg-secondary);
+    background-color: rgba(51, 51, 51, 0.1);
     color: var(--accent-color);
+    border: 1px solid var(--accent-color);
     border-radius: 15px;
     font-size: 0.8rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.project-tech span:hover {
+    background-color: var(--accent-color);
+    color: white;
 }
 
 /* 响应式设计 */
@@ -1102,4 +1184,25 @@ body::-webkit-scrollbar,
         top: 1rem;
         right: 1rem;
     }
+}
+
+/* 调整首页标题 */
+.featured-section h2 {
+    color: var(--text-primary) !important;
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.featured-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent-color);
 } 
